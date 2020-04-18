@@ -25,19 +25,19 @@ function getLength() {
 
 
 //store number in a variable
-var characterLength = getLength();
+  var characterLength = getLength();
  
 //Store yes or no lowercase in a variable
-var confirmLower = confirm('Would you like lowercase letters in your password?');
+  var confirmLower = confirm('Would you like lowercase letters in your password?');
  
 //Store yes or no uppercase in a variable
-var confirmUpper = confirm('Would you like uppercase letters in your password?');
+  var confirmUpper = confirm('Would you like uppercase letters in your password?');
    
 //Store yes or no number in a variable
-var confirmNumber = confirm('Would you like numbers in your password?');
+  var confirmNumber = confirm('Would you like numbers in your password?');
  
 //store yes or no symbol in a variable
-var confirmSymbol = confirm('Would you like symbols in your password?');
+  var confirmSymbol = confirm('Would you like symbols in your password?');
 
 //Function which generates the character types for the random password
  
@@ -46,13 +46,17 @@ function generateCharactersType() {
   var charactersType = "";
   if (confirmLower === true){
     charactersType = charactersType + randomLower;
-  }if (confirmUpper === true){
+  }
+  if (confirmUpper === true){
     charactersType = charactersType + randomUpper;
-  }if (confirmNumber === true){
+  }
+  if (confirmNumber === true){
     charactersType = charactersType + randomNumber;
-  }if (confirmSymbol === true) {
+  }
+  if (confirmSymbol === true) {
     charactersType = charactersType + randomSymbol;
-  }if (confirmLower === false && confirmUpper === false && confirmNumber === false && confirmSymbol === false){
+  }
+  if (confirmLower === false && confirmUpper === false && confirmNumber === false && confirmSymbol === false){
     return alert('Choose at least one character type') + document.location.reload();
   }
   return charactersType;
@@ -64,14 +68,14 @@ var charactersType = generateCharactersType();
 
 //Generate the password for what user entered
 function generatePassword(characterLength, characters) {
-  var pwd = "";
+  var passWord = "";
   var passwordText = document.querySelector("#password");
  
   for (var i = 0; i < characterLength; i++) {
-    pwd += characters.charAt(Math.floor(Math.random() * characters.length));
+    passWord += characters.charAt(Math.floor(Math.random() * characters.length));
   }
-  console.log(pwd);
-  return pwd;
+  console.log(passWord);
+  return passWord;
 }
  
 // Write password to the #password input
