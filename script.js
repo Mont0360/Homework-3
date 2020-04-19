@@ -39,10 +39,10 @@ function getLength() {
 //store yes or no symbol in a variable
   var confirmSymbol = confirm('Would you like symbols in your password?');
 
-//Function which generates the character types for the random password
- 
 
-function generateCharactersType() {
+
+  //Function which generates the character types for the random password
+ function generateCharactersType() {
   var charactersType = "";
   if (confirmLower === true){
     charactersType = charactersType + randomLower;
