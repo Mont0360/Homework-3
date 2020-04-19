@@ -8,7 +8,7 @@ var randomNumber = '0123456789';
 //input for number between 8 and 128
 function getLength() {
   //prompt for input
-  var userLength = prompt('Enter a number no less than 8 characters and no more than 128 characters');
+  var userLength = prompt('Enter a number no less than 8 and no more than 128');
  
   //parse the string and turn it to an integer
   var parseString= parseInt(userLength);
